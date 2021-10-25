@@ -1,0 +1,90 @@
+/* CSS - Cascating StayleSheet */
+* {
+  /* * e um seletor universal*/
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%); /*cria uma variavel onde recebe uma cor*/
+  --grey: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothinh: antialiased;
+}
+
+body {
+  display: grid; /*maneira de visualização*/
+  place-items: center; /*centraliza o texto*/
+}
+
+main {
+  background: url(/images/background.svg);
+  width: 375px;
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative; /* torna o limite para ser o dententor do span*/
+}
+
+/* altera a possição do span*/
+.avatar span {
+  position: absolute; /* permite que criar niveis de sobre posissão*/
+  top: -15px;
+  left: -18px;
+  z-index: 1; /* move para frente*/
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /**/
+
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem; /*altera o tanho*/
+}
+
+a {
+  color: var(--grey); /*muda a cor da tag*/
+  text-decoration: none; /*remove a decoração do link*/
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none; /* remove o stilo de lista tirando as bolinhas*/
+  padding: 0; /* alinha ao centro*/
+
+  display: flex; /* deixa os elementos um ao lado do outro */
+  gap: 0.5rem; /* da espasso entre os elementos*/
+
+  justify-content: center;
+}
